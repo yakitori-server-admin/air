@@ -26,6 +26,25 @@ header div a {
     display: inline-block;
     padding: 28px 0;
     margin-right: 24px;
+    transition: .3s;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+header div a::after {
+    position: absolute;
+    bottom: 28px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: var(--product-accent);
+    transform: scale(0, 1);
+    transform-origin: center top;
+    transition: .45s;
+  }
+header div a:hover::after {
+    transform: scale(1, 1);
 }
 #logo {
     font-family: 'Fira Sans', sans-serif;
